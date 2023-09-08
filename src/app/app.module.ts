@@ -8,10 +8,12 @@ import { environment} from "../../environment";
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CompanyEditComponent } from './company/company-edit/company-edit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CompanyEditComponent
   ],
   imports: [
     BrowserModule,
