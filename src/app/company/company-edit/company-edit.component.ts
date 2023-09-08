@@ -13,13 +13,14 @@ export class CompanyEditComponent implements OnInit {
   company$: Observable<Company>;
 
   constructor(private db: AngularFirestore) {
-    this.company$ = this.db.doc<Company>('companies/6niW63kpjzCXdEt28JXE')
+    this.company$ = this.db
+      .doc<Company>('companies/6niW63kpjzCXdEt28JXE')
       .valueChanges();
   }
 
   ngOnInit() {}
 
-  saveCompany(company: any) {
+  saveCompany(company) {
     this.companyService.saveCompany(company);
   }
 }
