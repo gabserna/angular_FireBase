@@ -4,12 +4,11 @@ import { CompanyEditComponent } from './company/company-edit/company-edit.compon
 
 const routes: Routes = [
   { path: 'company/edit', component: CompanyEditComponent },
-  { path: '**', redirectTo: 'company/edit' }
+  { path: '**', redirectTo: 'company/edit' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
-
+export class AppRoutingModule {}
