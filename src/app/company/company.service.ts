@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Company } from '../models/company';
-import { Observable } from 'rxjs';
 import {AngularFirestore, AngularFirestoreDocument} from "@angular/fire/compat/firestore";
+import {Observable} from "rxjs";
+import {Company} from "../models/company";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompanyService {
 
-  private companyRef: AngularFirestoreDocument<Company>;
+  private companyRef: AngularFirestoreDocument<any>;
 
   constructor(private db: AngularFirestore) {
-    this.companyRef = this.db.doc<Company>('companies/6niW63kpjzCXdEt28JXE');
+    this.companyRef = this.db.doc<Company>('companies/company');
   }
 
-  getCompanyObservable(): Observable<Company | undefined> {
+  getCompanyObservable(): Observable<Company | any> {
     return this.companyRef.valueChanges();
   }
 
-  saveCompany(company: Company) {
+  saveCompany(company: any): void {
     this.companyRef.set(company);
   }
 
