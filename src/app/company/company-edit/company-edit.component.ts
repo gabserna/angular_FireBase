@@ -24,12 +24,12 @@ export class CompanyEditComponent implements OnInit {
 
   ngOnInit() {}
 
-  saveCompany(company: { name: any; }) {
+  saveCompany(company: any) {
     // this.companyService.saveCompany(company);
     this.companyService.saveCompany({name: company.name});
   }
 
-  editCompany(company: { phone: string; }) {
+  editCompany(company: any) {
     this.companyService.editCompany({phone: '123-456-7890'});
   }
 
