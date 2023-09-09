@@ -3,6 +3,9 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { Company } from '../../models/company';
 import { CompanyService } from '../company.service';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
 
 @Component({
   selector: 'app-company-edit',
@@ -23,8 +26,17 @@ export class CompanyEditComponent implements OnInit {
 
   ngOnInit() {}
 
-  saveCompany(company: any) {
-    this.companyService.saveCompany(company);
+  saveCompany(company: { name: any; }) {
+    // this.companyService.saveCompany(company);
+    this.companyService.saveCompany({name: company.name});
+  }
+
+  editCompany(company: { phone: string; }) {
+    this.companyService.editCompany({phone: '123-456-7890'});
+  }
+
+  deleteCompany() {
+    this.companyService.deleteCompany();
   }
   
 }
