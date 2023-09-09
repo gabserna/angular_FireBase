@@ -3,8 +3,6 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { Company } from '../../models/company';
 import { CompanyService } from '../company.service';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
 
 
 @Component({
