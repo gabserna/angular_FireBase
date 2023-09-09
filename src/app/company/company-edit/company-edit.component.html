@@ -1,6 +1,6 @@
 {{ company$ | async | json }}
 
-<h1>Company Edit</h1>
+<!-- <h1>Company Edit</h1> -->
 <mat-card *ngIf="company$ | async as company">
   <mat-form-field>
     <input type="text" matInput [(ngModel)]="company.name">

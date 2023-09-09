@@ -10,17 +10,21 @@ import { CompanyService } from '../company.service';
   styleUrls: ['./company-edit.component.css'],
 })
 export class CompanyEditComponent implements OnInit {
-  company$: Observable<Company>;
+  // company$: Observable<Company>;
+  company$: Observable<Company | undefined> = new Observable<Company | undefined>();
 
-  constructor(private db: AngularFirestore) {
+
+  constructor(private db: AngularFirestore, private companyService: CompanyService) {
     this.company$ = this.db
       .doc<Company>('companies/6niW63kpjzCXdEt28JXE')
       .valueChanges();
   }
+  
 
   ngOnInit() {}
 
-  saveCompany(company) {
+  saveCompany(company: any) {
     this.companyService.saveCompany(company);
   }
+  
 }
