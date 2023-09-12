@@ -1,5 +1,6 @@
-export interface Company {
+export interface Contact {
     id?: string;
     name: string;
     phone?: string;
+    companyId?: string;
   }
