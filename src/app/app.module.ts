@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from "@angular/material/input";
-import { ErrorHandlerModule } from './error-handler/error-handler.module';
+// import { ErrorHandlerModule } from './error-handler/error-handler.module';
 import { CompanyEditComponent } from './company/company-edit/company-edit.component'
 
 @NgModule({
@@ -36,7 +36,7 @@ import { CompanyEditComponent } from './company/company-edit/company-edit.compon
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
-    ErrorHandlerModule
+    // ErrorHandlerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
